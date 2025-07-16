@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f0f0;
+  color: #222;
+  min-height: 100vh;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+.header {
+  width: 90%;
+  max-width: 1200px;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#theme-toggle {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+body.dark #theme-toggle {
+  background-color: #eee;
+  color: #333;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+body.dark .card {
+  background-color: #1e1e1e;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.card p {
+  padding: 0 1.2rem 1.5rem;
+  color: #666;
+}
+
+body.dark .card p {
+  color: #bbb;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+}

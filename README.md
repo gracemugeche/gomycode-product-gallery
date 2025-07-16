@@ -38,9 +38,7 @@ product-gallery/
 ## Project Purpose
 To demonstrate fundamental frontend development skills using **HTML, CSS, and JS only**.  
 Focus areas: responsive design, theme toggling, animations, and clean UI structure.
-```
 
----
 
 
 
